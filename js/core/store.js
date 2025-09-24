@@ -1,0 +1,1 @@
+export const store={load:function(k,f){try{var v=localStorage.getItem(k);return v==null?f:JSON.parse(v)}catch(e){return f}},save:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}},remove:function(k){try{localStorage.removeItem(k)}catch(e){}}};

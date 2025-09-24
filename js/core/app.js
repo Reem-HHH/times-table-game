@@ -1,0 +1,1 @@
+export const PASTEL=['#FDE68A','#A7F3D0','#BFDBFE','#FBCFE8','#D8B4FE','#FCA5A5','#FDBA74','#86EFAC','#93C5FD','#FDE2FF'];export const State={screen:'start',player:null,session:{table:null,total:10,asked:0,correct:0,start:0,time:0,showSkip:false}};export const AppAPI={};

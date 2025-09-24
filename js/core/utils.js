@@ -1,0 +1,1 @@
+export const $=function(s){return document.querySelector(s)};export function esc(s){var m={'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'};return String(s).replace(/[&<>"']/g,function(x){return m[x]});}

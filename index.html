@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Multiplication Memory</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧮</text></svg>">
+</head>
+<body>
+  <header class="bar">
+    <div class="left">
+      <button class="btn ghost" id="homeBtn">🏠 Home</button>
+      <button class="btn ghost" id="backBtn">⬅️ Back</button>
+    </div>
+    <div class="center"><h1>Multiplication Memory</h1></div>
+    <div class="right">
+      <button class="btn ghost" id="leaderBtn">🏆 Leaderboard</button>
+      <button class="btn ghost" id="printBtn">🖨️ Print Worksheets</button>
+      <button class="btn ghost" id="musicBtn">🎵 Music</button>
+    </div>
+  </header>
+  <main id="main"></main>
+  <footer class="bar">
+    <div class="small">
+      © For Class — Practice makes progress!<br>
+      Done by: <strong>Miss Reem Al Shamsi</strong>
+    </div>
+  </footer>
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="card">
+      <div class="card-body" id="modalBody"></div>
+      <div class="row" style="justify-content:flex-end; gap:10px; margin-top: 12px;">
+        <button class="btn secondary" id="modalCancel">Cancel</button>
+        <button class="btn danger" id="modalConfirm">Leave</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
