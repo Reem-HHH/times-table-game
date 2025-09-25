@@ -43,7 +43,7 @@ printBtn.onclick=function(){ if(State.screen==='game') confirmLeaveRound('print'
 
 var audio=createAudio(function(state){ /* could update UI */ });
 window.App.Audio=audio;
-function updateMusic(){ var name = audio.currentTrackName ? audio.currentTrackName() : 'Music'; musicBtn.textContent='🎵 '+name; }
+function updateMusic(){ var name = audio.currentTrackName ? audio.currentTrackName() : 'Music'; musicBtn.textContent='🎵'+name; }
 musicBtn.onclick=function(e){ if(e.shiftKey) audio.nextTrack(); else audio.toggleMusic(); updateMusic(); };
 updateMusic();
 

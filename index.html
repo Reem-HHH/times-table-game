@@ -1,42 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Metadata -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Multiplication Memory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Responsive design -->
+  <title></title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="./css/styles.css" />
+
+  <!-- Favicon: emoji rendered as SVG -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧮</text></svg>">
 </head>
 <body>
+
+  <!-- ===== Top Navigation Bar ===== -->
   <header class="bar">
+    <!-- Left side of header: navigation buttons -->
     <div class="left">
-      <button class="btn ghost" id="homeBtn">🏠 Home</button>
-      <button class="btn ghost" id="backBtn">⬅️ Back</button>
+      <button class="btn ghost" id="homeBtn">Home</button>
+      <button class="btn ghost" id="backBtn">Back</button>
     </div>
-    <div class="center"><h1>Multiplication Memory</h1></div>
+
+    <!-- Center of header: page title (set dynamically in JS) -->
+    <div class="center"><h1></h1></div>
+
+    <!-- Right side of header: extra actions -->
     <div class="right">
-      <button class="btn ghost" id="leaderBtn">🏆 Leaderboard</button>
-      <button class="btn ghost" id="printBtn">🖨️ Print Worksheets</button>
-      <button class="btn ghost" id="musicBtn">🎵 Music</button>
+      <button class="btn ghost" id="leaderBtn">Leaderboard</button>
+      <button class="btn ghost" id="printBtn">Print Worksheets</button>
+      <button class="btn ghost" id="musicBtn">🎵</button> <!-- Toggle background music -->
     </div>
   </header>
+
+  <!-- ===== Main App Container ===== -->
+  <!-- Content gets injected here dynamically by JS (different screens: start, select, game, etc.) -->
   <main id="main"></main>
+
+  <!-- ===== Footer ===== -->
   <footer class="bar">
     <div class="small">
       © For Class — Practice makes progress!<br>
       Done by: <strong>Miss Reem Al Shamsi</strong>
     </div>
   </footer>
+
+  <!-- ===== Modal (popup for confirming actions, e.g., leaving game) ===== -->
   <div id="modal" class="modal" aria-hidden="true">
     <div class="card">
-      <div class="card-body" id="modalBody"></div>
+      <div class="card-body" id="modalBody"></div> <!-- Content inserted by JS -->
       <div class="row" style="justify-content:flex-end; gap:10px; margin-top: 12px;">
         <button class="btn secondary" id="modalCancel">Cancel</button>
         <button class="btn danger" id="modalConfirm">Leave</button>
       </div>
     </div>
   </div>
+
+  <!-- ===== Main JavaScript entry point ===== -->
+  <!-- type="module" allows usage of ES6 imports/exports -->
   <script type="module" src="./js/main.js"></script>
 </body>
 </html>
