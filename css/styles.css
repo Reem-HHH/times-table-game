@@ -69,8 +69,8 @@ header.bar .right {
   height:68px;
   padding: 10px 16px;
   background: transparent;
-  /*position: sticky; top: 0; z-index: 20; /* Stays on top while scrolling */
-}
+  /*position: sticky; top: 0; z-index: 20; /* Stays on top while scrolling }
+*/
 
 header.bar .left{ justify-self:start; display:flex; gap:10px; }
 header.bar .center{ justify-self:center; text-align:center; }
@@ -132,7 +132,7 @@ main {
 
 /* ---- Input fields ---- */
 .input{
-  padding: 16px 18px;
+  padding: 15px 15px;
   border-radius: 999px;  /* pill shape */
   border: 2px solid #d9e3ef;
   background: #fff;
@@ -161,7 +161,47 @@ main {
 .btn.ghost{ background: rgba(255,255,255,.15); border: 2px solid rgba(255,255,255,.6); color: var(--ink); box-shadow: none; }
 
 /* ---- Tiles (used for table selection screen) ---- */
-.tiles{ display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px; width: 100%; }
+/* ---- Tiles (used for table selection screen) ---- */
+/* Container: horizontal scroll row */
+.tiles{
+  display: flex;
+  gap: 16px;
+  padding: 6px 4px;
+  overflow-x: auto;          /* enable side scroll */
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; /* nice snappy scroll on touch */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Each tile is a fixed-size card in the row */
+.tile{
+  flex: 0 0 120px;           /* don't shrink, fixed width */
+  height: 120px;
+  display: flex; align-items:center; justify-content:center;
+  border-radius: 20px; font: 900 32px/1 'Nunito', sans-serif; color:#fff;
+  scroll-snap-align: center;
+}
+
+
+/* Give each tile a fun pastel color */
+.tile:nth-child(1)  { background: #ffb703; } /* yellow */
+.tile:nth-child(2)  { background: #8ecae6; } /* blue */
+.tile:nth-child(3)  { background: #90be6d; } /* green */
+.tile:nth-child(4)  { background: #f94144; } /* red */
+.tile:nth-child(5)  { background: #f3722c; } /* orange */
+.tile:nth-child(6)  { background: #f9844a; } /* coral */
+.tile:nth-child(7)  { background: #43aa8b; } /* teal */
+.tile:nth-child(8)  { background: #577590; } /* navy */
+.tile:nth-child(9)  { background: #b5179e; } /* purple */
+.tile:nth-child(10) { background: #7209b7; } /* deep purple */
+.tile:nth-child(11) { background: #4d908e; } /* cool green */
+
+.tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 22px rgba(0,0,0,.3);
+}
+
+/* .tiles{ display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px; width: 100%; }
 .tile{
   padding: 28px; border-radius: 22px;
   background: #fff; border: 3px solid transparent;
@@ -171,7 +211,7 @@ main {
   transition: transform .15s ease, border-color .2s ease;
 }
 .tile:hover{ transform: translateY(-2px); border-color: var(--secondary); }
-
+ */
 /* ---- Stats row (Player / Table / Score / Time) ---- */
 .stats{ display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; }
 .metric{
