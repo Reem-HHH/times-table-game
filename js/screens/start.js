@@ -18,7 +18,7 @@ export function renderStart() {
 
       <div class="card start-card centered-card">
         <div class="card-body">
-          <div class="grid" style="justify-items:center">
+          <div class="grid" >
             <input
               class="input"
               id="nameInput"
